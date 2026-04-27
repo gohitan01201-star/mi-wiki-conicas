@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wiki de Geometria Analitica: Conicas</title>
+    <meta
+      name="description"
+      content="Wiki educativa bilingue sobre circunferencia, circulo, parabola, elipse e hiperbola con graficas, ejercicios, herramientas TIC y referencias."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">GA</span>
+        <span>Wiki Conicas</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegacion principal">
+        <a href="#conicas">Conicas</a>
+        <a href="#graficador">Graficador</a>
+        <a href="#herramientas">Herramientas</a>
+        <a href="#ejercicios">Ejercicios</a>
+        <a href="#referencias">Referencias</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-media" aria-hidden="true">
+          <canvas id="heroCanvas" width="900" height="620"></canvas>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Geometria analitica en espanol e ingles</p>
+          <h1>Wiki de figuras conicas</h1>
+          <p>
+            Un espacio web para estudiar circunferencia, circulo, parabola,
+            elipse e hiperbola mediante teoria, graficas, audio, video,
+            herramientas TIC y ejercicios resueltos.
+          </p>
+          <div class="hero-actions" aria-label="Acciones principales">
+            <a class="button primary" href="#conicas">Explorar teoria</a>
+            <a class="button secondary" href="#graficador">Probar graficador</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview section-band" aria-labelledby="objetivo-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Proposito del proyecto</p>
+            <h2 id="objetivo-title">Aprender mirando, escuchando y practicando</h2>
+          </div>
+          <div class="overview-grid">
+            <article>
+              <h3>Informacion escrita</h3>
+              <p>Definiciones, ecuaciones canonicas, elementos principales y aplicaciones reales de cada conica.</p>
+            </article>
+            <article>
+              <h3>Informacion visual</h3>
+              <p>Graficas en plano cartesiano, comparaciones de formas y una zona interactiva para cambiar parametros.</p>
+            </article>
+            <article>
+              <h3>Informacion auditiva</h3>
+              <p>Botones de lectura en voz alta para repasar la teoria principal usando sintesis de voz del navegador.</p>
+            </article>
+            <article>
+              <h3>Informacion audiovisual</h3>
+              <p>Videos educativos seleccionados y herramientas externas para modelar ecuaciones y observar resultados.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="conicas" class="section-inner conics-section" aria-labelledby="conicas-title">
+        <div class="section-heading">
+          <p class="eyebrow">Teoria bilingue</p>
+          <h2 id="conicas-title">Conicas principales</h2>
+        </div>
+
+        <div class="conic-list">
+          <article class="conic-panel" id="circunferencia">
+            <div class="conic-visual">
+              <svg viewBox="0 0 320 240" role="img" aria-label="Grafica de una circunferencia con centro y radio">
+                <use href="#grid"></use>
+                <circle cx="160" cy="120" r="66" class="shape shape-circle"></circle>
+                <line x1="160" y1="120" x2="226" y2="120" class="measure"></line>
+                <circle cx="160" cy="120" r="4" class="point"></circle>
+                <text x="168" y="112">C(h,k)</text>
+                <text x="188" y="111">r</text>
+              </svg>
+            </div>
+            <div class="conic-content">
+              <p class="tag">Circunferencia</p>
+              <h3>Todos los puntos a la misma distancia de un centro</h3>
+              <p class="readable">
+                La circunferencia es el conjunto de puntos del plano que estan a una distancia fija, llamada radio, de un punto fijo llamado centro.
+                Su ecuacion canonica es <strong>(x - h)^2 + (y - k)^2 = r^2</strong>.
+              </p>
+              <p lang="en">
+                A circle circumference is the set of all points in the plane at a fixed distance, the radius, from a fixed point called the center.
+                Its standard equation is <strong>(x - h)^2 + (y - k)^2 = r^2</strong>.
+              </p>
+              <button class="speak-button" type="button" data-speak="La circunferencia es el conjunto de puntos del plano que estan a una distancia fija, llamada radio, de un centro. Su ecuacion canonica es x menos h al cuadrado mas y menos k al cuadrado igual a r al cuadrado.">Escuchar teoria</button>
+            </div>
+          </article>
+
+          <article class="conic-panel" id="circulo">
+            <div class="conic-visual">
+              <svg viewBox="0 0 320 240" role="img" aria-label="Grafica de un circulo sombreado">
+                <use href="#grid"></use>
+                <circle cx="160" cy="120" r="68" class="shape shape-disk"></circle>
+                <circle cx="160" cy="120" r="68" class="shape shape-circle"></circle>
+                <circle cx="160" cy="120" r="4" class="point"></circle>
+                <text x="128" y="124">area</text>
+              </svg>
+            </div>
+            <div class="conic-content">
+              <p class="tag">Circulo</p>
+              <h3>La region interior limitada por una circunferencia</h3>
+              <p class="readable">
+                El circulo incluye todos los puntos interiores y la frontera de una circunferencia. Su area es <strong>A = pi r^2</strong> y la longitud de su frontera es <strong>L = 2 pi r</strong>.
+              </p>
+              <p lang="en">
+                A disk is the region made of all interior points and the boundary circle. Its area is <strong>A = pi r^2</strong>, and the boundary length is <strong>L = 2 pi r</strong>.
+              </p>
+              <button class="speak-button" type="button" data-speak="El circulo es la region interior limitada por una circunferencia. Su area es pi por radio al cuadrado y la longitud de la frontera es dos pi por radio.">Escuchar teoria</button>
+            </div>
+          </article>
+
+          <article class="conic-panel" id="parabola">
+            <div class="conic-visual">
+              <svg viewBox="0 0 320 240" role="img" aria-label="Grafica de una parabola con foco y directriz">
+                <use href="#grid"></use>
+                <path d="M84 202 C116 102 204 102 236 202" class="shape shape-parabola"></path>
+                <line x1="68" y1="190" x2="252" y2="190" class="directrix"></line>
+                <circle cx="160" cy="118" r="5" class="point"></circle>
+                <text x="171" y="122">F</text>
+                <text x="92" y="184">directriz</text>
+              </svg>
+            </div>
+            <div class="conic-content">
+              <p class="tag">Parabola</p>
+              <h3>Puntos equidistantes de un foco y una directriz</h3>
+              <p class="readable">
+                La parabola es el conjunto de puntos que estan a la misma distancia de un punto fijo, el foco, y de una recta fija, la directriz.
+                Si el vertice es <strong>(h,k)</strong>, una forma comun es <strong>(x - h)^2 = 4p(y - k)</strong>.
+              </p>
+              <p lang="en">
+                A parabola is the set of points equidistant from a fixed point, the focus, and a fixed line, the directrix.
+                With vertex <strong>(h,k)</strong>, a common form is <strong>(x - h)^2 = 4p(y - k)</strong>.
+              </p>
+              <button class="speak-button" type="button" data-speak="La parabola es el conjunto de puntos equidistantes de un foco y una directriz. Una ecuacion comun es x menos h al cuadrado igual a cuatro p por y menos k.">Escuchar teoria</button>
+            </div>
+          </article>
+
+          <article class="conic-panel" id="elipse">
+            <div class="conic-visual">
+              <svg viewBox="0 0 320 240" role="img" aria-label="Grafica de una elipse con focos">
+                <use href="#grid"></use>
+                <ellipse cx="160" cy="120" rx="92" ry="54" class="shape shape-ellipse"></ellipse>
+                <line x1="68" y1="120" x2="252" y2="120" class="measure"></line>
+                <circle cx="122" cy="120" r="5" class="point"></circle>
+                <circle cx="198" cy="120" r="5" class="point"></circle>
+                <text x="108" y="112">F1</text>
+                <text x="204" y="112">F2</text>
+              </svg>
+            </div>
+            <div class="conic-content">
+              <p class="tag">Elipse</p>
+              <h3>La suma de distancias a dos focos permanece constante</h3>
+              <p class="readable">
+                La elipse es el conjunto de puntos cuya suma de distancias a dos focos es constante. Para centro <strong>(h,k)</strong> y eje mayor horizontal:
+                <strong>((x - h)^2 / a^2) + ((y - k)^2 / b^2) = 1</strong>.
+              </p>
+              <p lang="en">
+                An ellipse is the set of points whose sum of distances to two foci is constant. For center <strong>(h,k)</strong> and a horizontal major axis:
+                <strong>((x - h)^2 / a^2) + ((y - k)^2 / b^2) = 1</strong>.
+              </p>
+              <button class="speak-button" type="button" data-speak="La elipse es el conjunto de puntos cuya suma de distancias a dos focos permanece constante. Su ecuacion canonica horizontal es x menos h al cuadrado sobre a al cuadrado mas y menos k al cuadrado sobre b al cuadrado igual a uno.">Escuchar teoria</button>
+            </div>
+          </article>
+
+          <article class="conic-panel" id="hiperbola">
+            <div class="conic-visual">
+              <svg viewBox="0 0 320 240" role="img" aria-label="Grafica de una hiperbola con asintotas">
+                <use href="#grid"></use>
+                <line x1="64" y1="190" x2="256" y2="50" class="asymptote"></line>
+                <line x1="64" y1="50" x2="256" y2="190" class="asymptote"></line>
+                <path d="M74 120 C106 70 126 70 142 120 C126 170 106 170 74 120" class="shape shape-hyperbola"></path>
+                <path d="M246 120 C214 70 194 70 178 120 C194 170 214 170 246 120" class="shape shape-hyperbola"></path>
+                <circle cx="110" cy="120" r="5" class="point"></circle>
+                <circle cx="210" cy="120" r="5" class="point"></circle>
+              </svg>
+            </div>
+            <div class="conic-content">
+              <p class="tag">Hiperbola</p>
+              <h3>La diferencia de distancias a dos focos permanece constante</h3>
+              <p class="readable">
+                La hiperbola es el conjunto de puntos cuya diferencia absoluta de distancias a dos focos es constante. Una forma horizontal es
+                <strong>((x - h)^2 / a^2) - ((y - k)^2 / b^2) = 1</strong>, con asintotas que orientan sus ramas.
+              </p>
+              <p lang="en">
+                A hyperbola is the set of points whose absolute difference of distances to two foci is constant. A horizontal form is
+                <strong>((x - h)^2 / a^2) - ((y - k)^2 / b^2) = 1</strong>, with asymptotes guiding the branches.
+              </p>
+              <button class="speak-button" type="button" data-speak="La hiperbola es el conjunto de puntos cuya diferencia absoluta de distancias a dos focos permanece constante. Sus asintotas indican la direccion de las ramas.">Escuchar teoria</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="graficador" class="section-band graph-section" aria-labelledby="graficador-title">
+        <div class="section-inner graph-layout">
+          <div>
+            <p class="eyebrow">Modelo visual</p>
+            <h2 id="graficador-title">Graficador interactivo basico</h2>
+            <p>
+              Cambia la figura y sus parametros para observar como la ecuacion modifica la grafica. Esta seccion sirve como apoyo visual antes de usar GeoGebra, Desmos o WolframAlpha.
+            </p>
+            <div class="control-panel" aria-label="Controles del graficador">
+              <label>
+                Figura
+                <select id="shapeSelect">
+                  <option value="circle">Circunferencia</option>
+                  <option value="ellipse">Elipse</option>
+                  <option value="parabola">Parabola</option>
+                  <option value="hyperbola">Hiperbola</option>
+                </select>
+              </label>
+              <label>
+                h
+                <input id="hInput" type="range" min="-4" max="4" value="0" step="1">
+              </label>
+              <label>
+                k
+                <input id="kInput" type="range" min="-3" max="3" value="0" step="1">
+              </label>
+              <label>
+                a / r
+                <input id="aInput" type="range" min="1" max="5" value="3" step="1">
+              </label>
+              <label>
+                b / p
+                <input id="bInput" type="range" min="1" max="4" value="2" step="1">
+              </label>
+            </div>
+            <p id="equationText" class="equation-box" aria-live="polite"></p>
+          </div>
+          <div class="graph-card">
+            <canvas id="graphCanvas" width="640" height="480" aria-label="Plano cartesiano con conica seleccionada"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section id="herramientas" class="section-inner" aria-labelledby="herramientas-title">
+        <div class="section-heading">
+          <p class="eyebrow">Herramientas TIC por integrante</p>
+          <h2 id="herramientas-title">Modelar y graficar conicas</h2>
+        </div>
+        <div class="tool-grid">
+          <article class="tool-card">
+            <h3>Integrante 1: GeoGebra</h3>
+            <p>Permite escribir ecuaciones directamente y manipular parametros con deslizadores.</p>
+            <ol>
+              <li>Abrir la calculadora grafica.</li>
+              <li>Escribir una ecuacion como <strong>x^2 + y^2 = 25</strong>.</li>
+              <li>Crear deslizadores para <strong>h</strong>, <strong>k</strong> y <strong>r</strong>.</li>
+              <li>Observar centro, radio, focos o asintotas segun la conica.</li>
+            </ol>
+            <a href="https://www.geogebra.org/graphing" target="_blank" rel="noreferrer">Abrir GeoGebra</a>
+          </article>
+          <article class="tool-card">
+            <h3>Integrante 2: Desmos</h3>
+            <p>Es util para graficar rapidamente ecuaciones y comparar varias curvas en el mismo plano.</p>
+            <ol>
+              <li>Abrir la calculadora grafica.</li>
+              <li>Ingresar <strong>((x-1)^2/9)+((y+2)^2/4)=1</strong>.</li>
+              <li>Agregar restricciones o colores para diferenciar conicas.</li>
+              <li>Usar la captura como evidencia visual en la wiki.</li>
+            </ol>
+            <a href="https://www.desmos.com/calculator?lang=es" target="_blank" rel="noreferrer">Abrir Desmos</a>
+          </article>
+          <article class="tool-card">
+            <h3>Integrante 3: WolframAlpha</h3>
+            <p>Identifica conicas, calcula propiedades y muestra pasos o informacion complementaria.</p>
+            <ol>
+              <li>Abrir WolframAlpha.</li>
+              <li>Escribir una consulta como <strong>hyperbola x^2/9 - y^2/4 = 1</strong>.</li>
+              <li>Revisar grafica, vertices, focos y asintotas.</li>
+              <li>Comparar el resultado con el desarrollo manual.</li>
+            </ol>
+            <a href="https://www.wolframalpha.com/examples/mathematics/geometry/coordinate-geometry/conic-sections/" target="_blank" rel="noreferrer">Abrir WolframAlpha</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="ejercicios" class="section-band" aria-labelledby="ejercicios-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Practica grupal</p>
+            <h2 id="ejercicios-title">Ejercicios resueltos por conica</h2>
+          </div>
+          <div class="exercise-table" role="table" aria-label="Ejercicios resueltos">
+            <div role="row" class="table-head">
+              <span role="columnheader">Conica</span>
+              <span role="columnheader">Ejercicio</span>
+              <span role="columnheader">Solucion breve</span>
+            </div>
+            <div role="row">
+              <span role="cell">Circunferencia</span>
+              <span role="cell">Hallar centro y radio de (x - 2)^2 + (y + 1)^2 = 16.</span>
+              <span role="cell">Centro (2,-1) y radio 4, porque r^2 = 16.</span>
+            </div>
+            <div role="row">
+              <span role="cell">Circulo</span>
+              <span role="cell">Calcular el area de un circulo de radio 5.</span>
+              <span role="cell">A = pi r^2 = 25pi unidades cuadradas.</span>
+            </div>
+            <div role="row">
+              <span role="cell">Parabola</span>
+              <span role="cell">Identificar vertice y foco de (x - 1)^2 = 8(y + 2).</span>
+              <span role="cell">4p = 8, entonces p = 2. Vertice (1,-2) y foco (1,0).</span>
+            </div>
+            <div role="row">
+              <span role="cell">Elipse</span>
+              <span role="cell">Analizar x^2/25 + y^2/9 = 1.</span>
+              <span role="cell">Centro (0,0), a = 5, b = 3, c = 4; focos (-4,0) y (4,0).</span>
+            </div>
+            <div role="row">
+              <span role="cell">Hiperbola</span>
+              <span role="cell">Analizar x^2/9 - y^2/4 = 1.</span>
+              <span role="cell">Centro (0,0), a = 3, b = 2, c = sqrt(13); asintotas y = +/- 2x/3.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-inner media-section" aria-labelledby="media-title">
+        <div class="section-heading">
+          <p class="eyebrow">Audiovisual</p>
+          <h2 id="media-title">Videos y recursos de apoyo</h2>
+        </div>
+        <div class="video-grid">
+          <article>
+            <h3>Introduccion a las conicas</h3>
+            <iframe
+              src="https://www.youtube.com/embed/Q8BbZxkZSSA"
+              title="Video introductorio sobre secciones conicas"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </article>
+          <article>
+            <h3>Curso de Khan Academy</h3>
+            <p>Lecciones sobre circunferencias, elipses, hiperbolas y parabolas con ejercicios progresivos.</p>
+            <a href="https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:conics" target="_blank" rel="noreferrer">Ver lecciones</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="referencias" class="section-band references" aria-labelledby="referencias-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Bibliografia web</p>
+            <h2 id="referencias-title">Referencias confiables</h2>
+          </div>
+          <ol class="reference-list">
+            <li><a href="https://math.libretexts.org/Bookshelves/Calculus/Book%3A_Calculus_%28OpenStax%29/11%3A_Parametric_Equations_and_Polar_Coordinates/11.5%3A_Conic_Sections" target="_blank" rel="noreferrer">OpenStax / LibreTexts. Conic Sections.</a></li>
+            <li><a href="https://mathworld.wolfram.com/ConicSection.html" target="_blank" rel="noreferrer">Wolfram MathWorld. Conic Section.</a></li>
+            <li><a href="https://mathworld.wolfram.com/Ellipse.html" target="_blank" rel="noreferrer">Wolfram MathWorld. Ellipse.</a></li>
+            <li><a href="https://mathworld.wolfram.com/Hyperbola.html" target="_blank" rel="noreferrer">Wolfram MathWorld. Hyperbola.</a></li>
+            <li><a href="https://mathworld.wolfram.com/Parabola.html" target="_blank" rel="noreferrer">Wolfram MathWorld. Parabola.</a></li>
+            <li><a href="https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:conics" target="_blank" rel="noreferrer">Khan Academy. Conic Sections.</a></li>
+            <li><a href="https://geogebra.github.io/docs/manual/en/Conic_sections/" target="_blank" rel="noreferrer">GeoGebra Manual. Conic Sections.</a></li>
+            <li><a href="https://www.geogebra.org/graphing" target="_blank" rel="noreferrer">GeoGebra Graphing Calculator.</a></li>
+            <li><a href="https://www.desmos.com/calculator?lang=es" target="_blank" rel="noreferrer">Desmos. Calculadora grafica.</a></li>
+            <li><a href="https://www.wolframalpha.com/examples/mathematics/geometry/coordinate-geometry/conic-sections/" target="_blank" rel="noreferrer">WolframAlpha. Examples: Conic Sections.</a></li>
+            <li><a href="https://www.symbolab.com/solver/conic-sections-calculator" target="_blank" rel="noreferrer">Symbolab. Conic Sections Calculator.</a></li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Wiki educativa creada para una actividad colaborativa de geometria analitica.</p>
+      <a href="#inicio">Volver arriba</a>
+    </footer>
+
+    <svg width="0" height="0" class="defs" aria-hidden="true" focusable="false">
+      <defs>
+        <g id="grid">
+          <rect x="0" y="0" width="320" height="240" fill="#fbf8f1"></rect>
+          <path d="M0 120H320M160 0V240" stroke="#3b4252" stroke-width="1.4"></path>
+          <path d="M40 0V240M80 0V240M120 0V240M200 0V240M240 0V240M280 0V240M0 40H320M0 80H320M0 160H320M0 200H320" stroke="#d8d2c4" stroke-width="1"></path>
+        </g>
+      </defs>
+    </svg>
+
+    <script src="script.js"></script>
+  </body>
+</html>
